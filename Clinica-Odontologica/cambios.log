@@ -1,0 +1,280 @@
+[2024-05-28 18:50:15] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-28 18:50:15] [ INFO ] [OdontologoDaoH2:16] Iniciando la operación de guardar un odontólogo
+[2024-05-28 18:50:15] [ INFO ] [OdontologoDaoH2:31] Odontólogo guardado con éxito: Odontologo{id=1, numeroMatricula='12345', nombre='Juan', apellido='Perez'}
+[2024-05-28 18:50:15] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-28 18:50:15] [ INFO ] [OdontologoDaoH2:16] Iniciando la operación de guardar un odontólogo
+[2024-05-28 18:50:15] [ INFO ] [OdontologoDaoH2:31] Odontólogo guardado con éxito: Odontologo{id=1, numeroMatricula='12345', nombre='Juan', apellido='Perez'}
+[2024-05-28 18:50:15] [ INFO ] [OdontologoDaoH2:16] Iniciando la operación de guardar un odontólogo
+[2024-05-28 18:50:15] [ INFO ] [OdontologoDaoH2:31] Odontólogo guardado con éxito: Odontologo{id=2, numeroMatricula='67890', nombre='Ana', apellido='Garcia'}
+[2024-05-28 18:50:15] [ INFO ] [OdontologoDaoH2:64] Iniciando la operación de listar todos los odontólogos
+[2024-05-28 18:50:15] [ INFO ] [OdontologoDaoH2:77] Odontólogos listados con éxito
+[2024-05-28 18:50:45] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-28 18:50:45] [ INFO ] [PacienteDAOH2:27] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-28 18:50:45] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-28 18:50:45] [ ERROR] [PacienteDAOH2:45] Invalid value "7" for parameter "columnIndex" [90008-224]
+[2024-05-28 19:01:56] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-28 19:05:40] [ WARN ] [BD:40] NULL not allowed for column "EMAIL"; SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID) VALUES ('Jorgito','Pereyra','111111','2024-05-16', 1), ('German','Fraire','22222','2024-05-10',2) [23502-224]
+[2024-05-28 19:10:47] [ WARN ] [BD:40] Column count does not match; SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID) VALUES ('Jorgito','Pereyra','111111','2024-05-16', 1), ('German','Fraire','22222','2024-05-10',2, 'german@example.com' ); INSERT INTO DOMICILIOS  (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES ('Siempre Viva',742,'Springfield','USA'),('Av. Uruguay',345,'Punta del Este','Uruguay') [21002-224]
+[2024-05-28 19:31:05] [ WARN ] [BD:40] Column count does not match; SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID) VALUES ('Jorgito','Pereyra','111111','2024-05-16', 1), ('German','Fraire','22222','2024-05-10',2, 'german@example.com' ); INSERT INTO DOMICILIOS  (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES ('Siempre Viva',742,'Springfield','USA'),('Av. Uruguay',345,'Punta del Este','Uruguay') [21002-224]
+[2024-05-28 19:31:05] [ INFO ] [PacienteDAOH2:49] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-28 19:36:11] [ WARN ] [BD:40] Column count does not match; SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID) VALUES ('Jorgito','Pereyra','111111','2024-05-16', 1), ('German','Fraire','22222','2024-05-10',2, 'german@example.com' ); INSERT INTO DOMICILIOS  (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES ('Siempre Viva',742,'Springfield','USA'),('Av. Uruguay',345,'Punta del Este','Uruguay') [21002-224]
+[2024-05-28 19:36:11] [ INFO ] [PacienteDAOH2:49] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-28 19:36:32] [ WARN ] [BD:40] Column count does not match; SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID) VALUES ('Jorgito','Pereyra','111111','2024-05-16', 1), ('German','Fraire','22222','2024-05-10',2, 'german@example.com' ); INSERT INTO DOMICILIOS  (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES ('Siempre Viva',742,'Springfield','USA'),('Av. Uruguay',345,'Punta del Este','Uruguay') [21002-224]
+[2024-05-28 19:36:32] [ INFO ] [PacienteDAOH2:49] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-28 19:39:00] [ WARN ] [BD:40] Column count does not match; SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID) VALUES ('Jorgito','Pereyra','111111','2024-05-16', 1), ('German','Fraire','22222','2024-05-10',2, 'german@example.com' ); INSERT INTO DOMICILIOS  (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES ('Siempre Viva',742,'Springfield','USA'),('Av. Uruguay',345,'Punta del Este','Uruguay') [21002-224]
+[2024-05-28 19:39:00] [ INFO ] [PacienteDAOH2:49] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-28 19:41:01] [ WARN ] [BD:40] Column count does not match; SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID) VALUES ('Jorgito','Pereyra','111111','2024-05-16', 1, 'jorgito@gmail.com'), ('German','Fraire','22222','2024-05-10',2, 'german@example.com' ); INSERT INTO DOMICILIOS  (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES ('Siempre Viva',742,'Springfield','USA'),('Av. Uruguay',345,'Punta del Este','Uruguay') [21002-224]
+[2024-05-28 19:41:01] [ INFO ] [PacienteDAOH2:49] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-28 19:44:36] [ WARN ] [BD:40] Column count does not match; SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID) VALUES ('Jorgito','Pereyra','111111','2024-05-16', 1, 'jorgito@gmail.com'), ('German','Fraire','22222','2024-05-10',2, 'german@example.com' ); INSERT INTO DOMICILIOS  (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES ('Siempre Viva',742,'Springfield','USA'),('Av. Uruguay',345,'Punta del Este','Uruguay') [21002-224]
+[2024-05-28 19:44:36] [ INFO ] [PacienteDAOH2:49] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-28 19:44:36] [ INFO ] [PacienteDAOH2:112] iniciando la busqueda por email: backendc3.Clinica_Odontologica.PacienteServiceTest@126253fd
+[2024-05-28 20:10:59] [ WARN ] [BD:40] Column count does not match; SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID) VALUES ('Jorgito','Pereyra','111111','2024-05-16', 1, 'jorgito@gmail.com'), ('German','Fraire','22222','2024-05-10',2, 'german@example.com' ); INSERT INTO DOMICILIOS  (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES ('Siempre Viva',742,'Springfield','USA'),('Av. Uruguay',345,'Punta del Este','Uruguay') [21002-224]
+[2024-05-28 20:10:59] [ INFO ] [PacienteDAOH2:49] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-28 20:10:59] [ INFO ] [PacienteDAOH2:112] iniciando la busqueda por email: backendc3.Clinica_Odontologica.PacienteServiceTest@126253fd
+[2024-05-28 20:21:48] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-28 20:21:48] [ INFO ] [PacienteDAOH2:49] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-28 20:21:48] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-28 20:22:21] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-28 20:22:21] [ INFO ] [PacienteDAOH2:49] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-28 20:22:21] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-28 20:22:21] [ INFO ] [PacienteDAOH2:112] iniciando la busqueda por email: backendc3.Clinica_Odontologica.PacienteServiceTest@7bbc8656
+[2024-05-28 20:49:05] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-28 20:49:05] [ INFO ] [PacienteDAOH2:49] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-28 20:49:05] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-28 20:49:05] [ INFO ] [PacienteDAOH2:112] iniciando la busqueda por email: backendc3.Clinica_Odontologica.PacienteServiceTest@7bbc8656
+[2024-05-29 17:59:44] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-29 17:59:44] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-29 17:59:44] [ INFO ] [OdontologoDaoH2:55] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-29 18:07:41] [ WARN ] [BD:40] Syntax error in SQL statement "CREATE TABLE ODONTOLOGOS (ID INT AUTO_INCREMENT PRIMARY KEY, NOMBRE VARCHAR(100) NOT NULL, APELLIDO VARCHAR(100) NOT NULL, NUMERO_MATRICULA VARCHAR(100) NOT NULL ) [*]VALUES ('JOR' NOT NULL, 'MONT' NOT NULL, 55TT), ('JOER' NOT NULL, 'MONET' NOT NULL, 5E5TT)"; SQL statement:
+CREATE TABLE ODONTOLOGOS (ID INT AUTO_INCREMENT PRIMARY KEY, NOMBRE VARCHAR(100) NOT NULL, APELLIDO VARCHAR(100) NOT NULL, NUMERO_MATRICULA VARCHAR(100) NOT NULL ) VALUES ('JOR' NOT NULL, 'MONT' NOT NULL, 55TT), ('JOER' NOT NULL, 'MONET' NOT NULL, 5E5TT) [42000-224]
+[2024-05-29 18:07:41] [ WARN ] [BD:40] Syntax error in SQL statement "CREATE TABLE ODONTOLOGOS (ID INT AUTO_INCREMENT PRIMARY KEY, NOMBRE VARCHAR(100) NOT NULL, APELLIDO VARCHAR(100) NOT NULL, NUMERO_MATRICULA VARCHAR(100) NOT NULL ) [*]VALUES ('JOR' NOT NULL, 'MONT' NOT NULL, 55TT), ('JOER' NOT NULL, 'MONET' NOT NULL, 5E5TT)"; SQL statement:
+CREATE TABLE ODONTOLOGOS (ID INT AUTO_INCREMENT PRIMARY KEY, NOMBRE VARCHAR(100) NOT NULL, APELLIDO VARCHAR(100) NOT NULL, NUMERO_MATRICULA VARCHAR(100) NOT NULL ) VALUES ('JOR' NOT NULL, 'MONT' NOT NULL, 55TT), ('JOER' NOT NULL, 'MONET' NOT NULL, 5E5TT) [42000-224]
+[2024-05-29 18:07:41] [ INFO ] [OdontologoDaoH2:55] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-29 18:07:41] [ ERROR] [OdontologoDaoH2:73] Table "ODONTOLOGOS" not found; SQL statement:
+SELECT * FROM ODONTOLOGOS WHERE ID=? [42102-224]
+[2024-05-29 18:08:09] [ WARN ] [BD:40] Syntax error in SQL statement "CREATE TABLE ODONTOLOGOS (ID INT AUTO_INCREMENT PRIMARY KEY, NOMBRE VARCHAR(100) NOT NULL, APELLIDO VARCHAR(100) NOT NULL, NUMERO_MATRICULA VARCHAR(100) NOT NULL ) [*]VALUES ('JOR' NOT NULL, 'MONT' NOT NULL, 55TT), ('JOER' NOT NULL, 'MONET' NOT NULL, 5E5TT)"; SQL statement:
+CREATE TABLE ODONTOLOGOS (ID INT AUTO_INCREMENT PRIMARY KEY, NOMBRE VARCHAR(100) NOT NULL, APELLIDO VARCHAR(100) NOT NULL, NUMERO_MATRICULA VARCHAR(100) NOT NULL ) VALUES ('JOR' NOT NULL, 'MONT' NOT NULL, 55TT), ('JOER' NOT NULL, 'MONET' NOT NULL, 5E5TT) [42000-224]
+[2024-05-29 18:08:09] [ WARN ] [BD:40] Syntax error in SQL statement "CREATE TABLE ODONTOLOGOS (ID INT AUTO_INCREMENT PRIMARY KEY, NOMBRE VARCHAR(100) NOT NULL, APELLIDO VARCHAR(100) NOT NULL, NUMERO_MATRICULA VARCHAR(100) NOT NULL ) [*]VALUES ('JOR' NOT NULL, 'MONT' NOT NULL, 55TT), ('JOER' NOT NULL, 'MONET' NOT NULL, 5E5TT)"; SQL statement:
+CREATE TABLE ODONTOLOGOS (ID INT AUTO_INCREMENT PRIMARY KEY, NOMBRE VARCHAR(100) NOT NULL, APELLIDO VARCHAR(100) NOT NULL, NUMERO_MATRICULA VARCHAR(100) NOT NULL ) VALUES ('JOR' NOT NULL, 'MONT' NOT NULL, 55TT), ('JOER' NOT NULL, 'MONET' NOT NULL, 5E5TT) [42000-224]
+[2024-05-29 18:08:09] [ INFO ] [OdontologoDaoH2:55] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-29 18:08:09] [ ERROR] [OdontologoDaoH2:73] Table "ODONTOLOGOS" not found; SQL statement:
+SELECT * FROM ODONTOLOGOS WHERE ID=? [42102-224]
+[2024-05-29 18:09:23] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-29 18:09:23] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-29 18:09:23] [ INFO ] [OdontologoDaoH2:55] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-29 18:10:03] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-29 18:10:03] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-29 18:10:03] [ INFO ] [OdontologoDaoH2:55] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-29 18:14:53] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-29 18:14:53] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-29 18:14:53] [ INFO ] [OdontologoDaoH2:55] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-29 18:14:53] [ INFO ] [OdontologoDaoH2:71] Odontólogos buscado con exito por id
+[2024-05-29 18:15:50] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-29 18:15:50] [ INFO ] [OdontologoDaoH2:22] Iniciando la operación de guardar un odontólogo
+[2024-05-29 18:15:50] [ ERROR] [OdontologoDaoH2:39] Error al guardar el odontólogo: Column "MATRICULA" not found; SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES(?,?,?) [42122-224]
+[2024-05-29 18:15:50] [ INFO ] [OdontologoDaoH2:22] Iniciando la operación de guardar un odontólogo
+[2024-05-29 18:15:50] [ ERROR] [OdontologoDaoH2:39] Error al guardar el odontólogo: Column "MATRICULA" not found; SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES(?,?,?) [42122-224]
+[2024-05-29 18:15:50] [ INFO ] [OdontologoDaoH2:109] Iniciando la operación de listar todos los odontólogos
+[2024-05-29 18:15:50] [ INFO ] [OdontologoDaoH2:122] Odontólogos listados con éxito
+[2024-05-29 18:16:13] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-29 18:16:13] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-29 18:16:13] [ INFO ] [OdontologoDaoH2:55] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-29 18:16:13] [ INFO ] [OdontologoDaoH2:71] Odontólogos buscado con exito por id
+[2024-05-29 18:16:56] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-29 18:16:56] [ INFO ] [OdontologoDaoH2:22] Iniciando la operación de guardar un odontólogo
+[2024-05-29 18:16:56] [ ERROR] [OdontologoDaoH2:39] Error al guardar el odontólogo: Column "MATRICULA" not found; SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES(?,?,?) [42122-224]
+[2024-05-29 18:16:56] [ INFO ] [OdontologoDaoH2:22] Iniciando la operación de guardar un odontólogo
+[2024-05-29 18:16:56] [ ERROR] [OdontologoDaoH2:39] Error al guardar el odontólogo: Column "MATRICULA" not found; SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES(?,?,?) [42122-224]
+[2024-05-29 18:16:56] [ INFO ] [OdontologoDaoH2:109] Iniciando la operación de listar todos los odontólogos
+[2024-05-29 18:16:56] [ INFO ] [OdontologoDaoH2:122] Odontólogos listados con éxito
+[2024-05-29 18:19:02] [ WARN ] [BD:40] Syntax error in SQL statement "CREATE TABLE ODONTOLOGOS (ID INT AUTO_INCREMENT PRIMARY KEY, NOMBRE VARCHAR(100) NOT NULL, APELLIDO VARCHAR(100) NOT NULL, NUMERO_MATRICULA VARCHAR(100) NOT NULL,[*])"; expected "identifier"; SQL statement:
+CREATE TABLE ODONTOLOGOS (ID INT AUTO_INCREMENT PRIMARY KEY, NOMBRE VARCHAR(100) NOT NULL, APELLIDO VARCHAR(100) NOT NULL, NUMERO_MATRICULA VARCHAR(100) NOT NULL,) [42001-224]
+[2024-05-29 18:19:02] [ INFO ] [OdontologoDaoH2:22] Iniciando la operación de guardar un odontólogo
+[2024-05-29 18:19:02] [ ERROR] [OdontologoDaoH2:39] Error al guardar el odontólogo: Table "ODONTOLOGOS" not found; SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES(?,?,?) [42102-224]
+[2024-05-29 18:19:02] [ INFO ] [OdontologoDaoH2:22] Iniciando la operación de guardar un odontólogo
+[2024-05-29 18:19:02] [ ERROR] [OdontologoDaoH2:39] Error al guardar el odontólogo: Table "ODONTOLOGOS" not found; SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES(?,?,?) [42102-224]
+[2024-05-29 18:19:02] [ INFO ] [OdontologoDaoH2:109] Iniciando la operación de listar todos los odontólogos
+[2024-05-29 18:19:02] [ ERROR] [OdontologoDaoH2:124] Error al listar los odontólogos: Table "ODONTOLOGOS" not found; SQL statement:
+SELECT * FROM ODONTOLOGOS [42102-224]
+[2024-05-29 18:21:27] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-29 18:21:27] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-29 18:21:27] [ INFO ] [OdontologoDaoH2:55] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-29 18:21:27] [ INFO ] [OdontologoDaoH2:71] Odontólogos buscado con exito por id
+[2024-05-29 18:21:50] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-29 18:21:50] [ INFO ] [OdontologoDaoH2:22] Iniciando la operación de guardar un odontólogo
+[2024-05-29 18:21:50] [ ERROR] [OdontologoDaoH2:39] Error al guardar el odontólogo: Column "MATRICULA" not found; SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES(?,?,?) [42122-224]
+[2024-05-29 18:21:50] [ INFO ] [OdontologoDaoH2:22] Iniciando la operación de guardar un odontólogo
+[2024-05-29 18:21:50] [ ERROR] [OdontologoDaoH2:39] Error al guardar el odontólogo: Column "MATRICULA" not found; SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES(?,?,?) [42122-224]
+[2024-05-29 18:21:50] [ INFO ] [OdontologoDaoH2:109] Iniciando la operación de listar todos los odontólogos
+[2024-05-29 18:21:50] [ INFO ] [OdontologoDaoH2:122] Odontólogos listados con éxito
+[2024-05-29 18:25:10] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-29 18:25:10] [ INFO ] [OdontologoDaoH2:22] Iniciando la operación de guardar un odontólogo
+[2024-05-29 18:25:10] [ ERROR] [OdontologoDaoH2:39] Error al guardar el odontólogo: Column "MATRICULA" not found; SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES(?,?,?,?) [42122-224]
+[2024-05-29 18:25:10] [ INFO ] [OdontologoDaoH2:22] Iniciando la operación de guardar un odontólogo
+[2024-05-29 18:25:10] [ ERROR] [OdontologoDaoH2:39] Error al guardar el odontólogo: Column "MATRICULA" not found; SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES(?,?,?,?) [42122-224]
+[2024-05-29 18:25:10] [ INFO ] [OdontologoDaoH2:109] Iniciando la operación de listar todos los odontólogos
+[2024-05-29 18:25:10] [ INFO ] [OdontologoDaoH2:122] Odontólogos listados con éxito
+[2024-05-29 18:26:57] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-29 18:26:57] [ INFO ] [OdontologoDaoH2:22] Iniciando la operación de guardar un odontólogo
+[2024-05-29 18:26:57] [ INFO ] [OdontologoDaoH2:37] Odontólogo guardado con éxito: Odontologo{id=1, numeroMatricula='12345', nombre='Juan', apellido='Perez'}
+[2024-05-29 18:26:57] [ INFO ] [OdontologoDaoH2:22] Iniciando la operación de guardar un odontólogo
+[2024-05-29 18:26:57] [ INFO ] [OdontologoDaoH2:37] Odontólogo guardado con éxito: Odontologo{id=2, numeroMatricula='67890', nombre='Ana', apellido='Garcia'}
+[2024-05-29 18:26:57] [ INFO ] [OdontologoDaoH2:109] Iniciando la operación de listar todos los odontólogos
+[2024-05-29 18:26:57] [ INFO ] [OdontologoDaoH2:122] Odontólogos listados con éxito
+[2024-05-29 18:27:34] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-29 18:27:34] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-29 18:27:34] [ INFO ] [OdontologoDaoH2:55] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-29 18:27:34] [ INFO ] [OdontologoDaoH2:71] Odontólogos buscado con exito por id
+[2024-05-29 18:28:17] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-29 18:28:17] [ INFO ] [PacienteDAOH2:49] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-29 18:28:17] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-29 18:28:17] [ INFO ] [PacienteDAOH2:112] iniciando la busqueda por email: backendc3.Clinica_Odontologica.PacienteServiceTest@6933b6c6
+[2024-05-29 18:29:14] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-29 18:29:14] [ INFO ] [OdontologoDaoH2:22] Iniciando la operación de guardar un odontólogo
+[2024-05-29 18:29:14] [ INFO ] [OdontologoDaoH2:37] Odontólogo guardado con éxito: Odontologo{id=1, numeroMatricula='12345', nombre='Juan', apellido='Perez'}
+[2024-05-29 18:34:19] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-29 18:34:19] [ INFO ] [OdontologoDaoH2:22] Iniciando la operación de guardar un odontólogo
+[2024-05-29 18:34:19] [ INFO ] [OdontologoDaoH2:37] Odontólogo guardado con éxito: Odontologo{id=1, numeroMatricula='12345', nombre='Juan', apellido='Perez'}
+[2024-05-30 10:59:43] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 12:35:19] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 12:42:47] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: jorgito@gmail.com
+[2024-05-30 12:42:47] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 1
+[2024-05-30 12:42:54] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: jorgito@gmail.com
+[2024-05-30 12:42:54] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 1
+[2024-05-30 12:42:54] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: jorgito@gmail.com
+[2024-05-30 12:42:54] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 1
+[2024-05-30 12:42:54] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: jorgito@gmail.com
+[2024-05-30 12:42:54] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 1
+[2024-05-30 12:42:54] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: jorgito@gmail.com
+[2024-05-30 12:42:54] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 1
+[2024-05-30 12:42:55] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: jorgito@gmail.com
+[2024-05-30 12:42:55] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 1
+[2024-05-30 12:43:38] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: jorgito@gmail.com
+[2024-05-30 12:43:38] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 1
+[2024-05-30 12:44:01] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: jorgito@gmail.com
+[2024-05-30 12:44:01] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 1
+[2024-05-30 12:46:10] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 12:46:30] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 12:46:30] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 12:48:48] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: german@germa.com
+[2024-05-30 12:48:55] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: german@german.com
+[2024-05-30 12:49:00] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 12:49:00] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 12:49:18] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 12:49:18] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 12:50:45] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 12:51:22] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 12:51:22] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 12:51:57] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email:  german@gmail.com
+[2024-05-30 12:52:05] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 12:52:05] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 12:58:15] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 12:59:08] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 12:59:21] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 12:59:21] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 12:59:21] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 12:59:21] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 12:59:21] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 12:59:21] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 12:59:21] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 12:59:21] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 12:59:22] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 12:59:22] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 12:59:22] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 12:59:22] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 12:59:22] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 12:59:22] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 12:59:22] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 12:59:22] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 12:59:23] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 12:59:23] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 12:59:56] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 12:59:56] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 13:00:23] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: jorgito@gmail.com
+[2024-05-30 13:00:23] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 1
+[2024-05-30 13:00:30] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: 
+[2024-05-30 13:00:41] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 13:00:41] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 13:00:57] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: german
+[2024-05-30 13:01:49] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 13:02:16] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 13:02:16] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 13:02:45] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 13:03:12] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 13:03:12] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 13:03:13] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 13:03:13] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 13:03:13] [ INFO ] [PacienteDAOH2:134] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 13:03:13] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 14:08:16] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 14:08:35] [ INFO ] [PacienteDAOH2:140] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 14:08:35] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 14:20:48] [ INFO ] [PacienteDAOH2:140] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 14:20:48] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 15:03:09] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 15:05:36] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 15:08:41] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 15:09:39] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 15:12:20] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 15:17:30] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 15:23:47] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 15:24:31] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 15:33:09] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 15:34:41] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 15:36:18] [ INFO ] [PacienteDAOH2:140] iniciando la busqueda por email: jorgit@gmail.com
+[2024-05-30 15:36:26] [ INFO ] [PacienteDAOH2:140] iniciando la busqueda por email: jorgito@gmail.com
+[2024-05-30 15:36:26] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 1
+[2024-05-30 17:29:04] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 17:34:57] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 17:59:52] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 18:14:45] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 20:18:25] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 20:25:46] [ INFO ] [PacienteDAOH2:140] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 20:25:46] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 20:26:25] [ INFO ] [PacienteDAOH2:140] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 20:26:25] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 20:35:56] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 20:36:04] [ INFO ] [PacienteDAOH2:140] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 20:36:04] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 20:36:04] [ INFO ] [PacienteDAOH2:140] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 20:36:04] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 20:36:04] [ INFO ] [PacienteDAOH2:140] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 20:36:04] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 20:36:04] [ INFO ] [PacienteDAOH2:140] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 20:36:04] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 20:36:05] [ INFO ] [PacienteDAOH2:140] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 20:36:05] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 20:36:05] [ INFO ] [PacienteDAOH2:140] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 20:36:05] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 20:36:05] [ INFO ] [PacienteDAOH2:140] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 20:36:05] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 20:36:05] [ INFO ] [PacienteDAOH2:140] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 20:36:05] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 20:36:06] [ INFO ] [PacienteDAOH2:140] iniciando la busqueda por email: german@gmail.com
+[2024-05-30 20:36:06] [ INFO ] [DomicilioDAOH2:48] iniciando la busqueda de un domicilio con id: 2
+[2024-05-30 20:39:34] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 20:46:19] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 22:01:41] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 22:22:23] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 22:28:05] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 22:28:27] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-30 22:43:05] [ INFO ] [BD:35] tabla creada con exito
