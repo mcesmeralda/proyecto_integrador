@@ -1,8 +1,6 @@
 package backendc3.Clinica_Odontologica.dao;
 
-import backendc3.Clinica_Odontologica.model.Domicilio;
 import backendc3.Clinica_Odontologica.model.Odontologo;
-import backendc3.Clinica_Odontologica.model.Paciente;
 import org.apache.log4j.Logger;
 
 import java.sql.*;
@@ -10,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 public class OdontologoDaoH2 implements iDao<Odontologo>{
     private static final Logger logger= Logger.getLogger(OdontologoDaoH2.class);
-    static final String SQL_INSERT="INSERT INTO ODONTOLOGOS (NUMERO_MATRICULA, NOMBRE, APELLIDO) VALUES(?,?,?)";
+    private static final String SQL_INSERT="INSERT INTO ODONTOLOGOS (NUMERO_MATRICULA, NOMBRE, APELLIDO) VALUES(?,?,?)";
     private static final String SQL_SELECT_ONE="SELECT * FROM ODONTOLOGOS WHERE ID=?";
     private static final String SQL_DELETE="DELETE FROM ODONTOLOGOS WHERE ID=?";
     private static final String SQL_UPDATE="UPDATE ODONTOLOGOS SET NUMERO_MATRICULA=?, NOMBRE=?, APELLIDO=? WHERE ID=?";
@@ -34,6 +32,7 @@ public class OdontologoDaoH2 implements iDao<Odontologo>{
                 odontologo.setId(rs.getInt(1));
             }
 
+
             logger.info("Odontólogo guardado con éxito: " + odontologo);
         } catch (SQLException e) {
             logger.error("Error al guardar el odontólogo: " + e.getMessage());
@@ -56,6 +55,7 @@ public class OdontologoDaoH2 implements iDao<Odontologo>{
         Connection connection= null;
         Odontologo odontologo= null;
 
+
         try{
             connection= BD.getConnection();
             Statement statement= connection.createStatement();
@@ -63,7 +63,7 @@ public class OdontologoDaoH2 implements iDao<Odontologo>{
             psSElectOne.setInt(1,id);
             ResultSet rs= psSElectOne.executeQuery();
 
-            while(rs.next()){
+            if(rs.next()){
 
                 Odontologo odontologo1 = new Odontologo(rs.getInt("ID"), rs.getString("NUMERO_MATRICULA"), rs.getString("NOMBRE"), rs.getString("APELLIDO"));
             }
@@ -93,14 +93,24 @@ public class OdontologoDaoH2 implements iDao<Odontologo>{
 
     @Override
     public void actualizar(Odontologo odontologo) {
-        logger.info("iniciando las operaciones de: ");
+        logger.warn("iniciando las operaciones de actualizacion de un odontologo con id : "+ odontologo.getId());
         Connection connection= null;
+
         try{
             connection= BD.getConnection();
+            PreparedStatement psUpdate= connection.prepareStatement(SQL_UPDATE);
+            psUpdate.setString(1, odontologo.getNombre());
+            psUpdate.setString(2, odontologo.getApellido());
+            psUpdate.setString(3, odontologo.getNumeroMatricula());
+            psUpdate.setInt(4, odontologo.getId());
+            logger.info("Odontólogo actualizado con éxito");
+            psUpdate.executeUpdate();
+
 
         }catch (Exception e){
             logger.error(e.getMessage());
         }
+
 
     }
 

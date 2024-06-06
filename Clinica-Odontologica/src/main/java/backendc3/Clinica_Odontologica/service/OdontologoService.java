@@ -3,6 +3,7 @@ package backendc3.Clinica_Odontologica.service;
 import backendc3.Clinica_Odontologica.dao.OdontologoDaoH2;
 import backendc3.Clinica_Odontologica.dao.iDao;
 import backendc3.Clinica_Odontologica.model.Odontologo;
+import backendc3.Clinica_Odontologica.model.Paciente;
 
 import java.util.List;
 
@@ -31,4 +32,13 @@ public class OdontologoService{
     public List<Odontologo> buscarOdontologos() {
         return buscarOdontologos();
     }
+
+    public void actualizarOdontologo(Odontologo odontologo){
+        OdontologoiDao.actualizar(odontologo);
+    }
+
+    public List<Odontologo>listarTodos(){
+        return OdontologoiDao.buscarTodos();
+    }
+
 }

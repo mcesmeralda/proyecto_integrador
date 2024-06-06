@@ -7,7 +7,16 @@ public class Odontologo {
         private String nombre;
         private String apellido;
 
-        // Constructor con ID (usado para crear instancias desde la base de datos)
+
+
+
+        public Odontologo() {
+        }
+
+        public Odontologo(int id) {
+                this.id = id;
+        }
+
         public Odontologo(int id, String numeroMatricula, String nombre, String apellido) {
                 this.id = id;
                 this.numeroMatricula = numeroMatricula;

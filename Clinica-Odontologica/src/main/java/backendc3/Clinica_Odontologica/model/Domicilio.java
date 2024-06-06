@@ -6,6 +6,8 @@ import lombok.Setter;
 
 @Getter
 @Setter
+
+
 public class Domicilio {
     private Integer id;
     private String calle;
@@ -18,6 +20,10 @@ public class Domicilio {
         this.numero = numero;
         this.localidad = localidad;
         this.provincia = provincia;
+    }
+
+
+    public Domicilio() {
     }
 
     public Domicilio(Integer id, String calle, Integer numero, String localidad, String provincia) {

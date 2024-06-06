@@ -1,7 +1,6 @@
 package backendc3.Clinica_Odontologica.dao;
 
 import backendc3.Clinica_Odontologica.model.Domicilio;
-import backendc3.Clinica_Odontologica.model.Paciente;
 import org.apache.log4j.Logger;
 
 import java.sql.Connection;
@@ -10,12 +9,12 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.List;
 
-import static backendc3.Clinica_Odontologica.dao.OdontologoDaoH2.SQL_INSERT;
-
 public class DomicilioDAOH2 implements iDao<Domicilio>{
     private static final Logger logger= Logger.getLogger(DomicilioDAOH2.class);
     private static final String SQL_SELECT_ONE="SELECT * FROM DOMICILIOS WHERE ID=?";
     private static final String SQL_INSERT="INSERT INTO DOMICILIOS (CALLE, NUMERO,LOCALIDAD, PROVINCIA) VALUES(?,?,?,?)";
+    private static final String SQL_UPDATE="UPDATE  DOMICILIOS SET CALLE=?,NUMERO=?, LOCALIDAD=?, PROVINCIA =? WHERE ID=?";
+
     @Override
     public Domicilio guardar(Domicilio domicilio) {
         logger.info("iniciando las operaciones de guardado");

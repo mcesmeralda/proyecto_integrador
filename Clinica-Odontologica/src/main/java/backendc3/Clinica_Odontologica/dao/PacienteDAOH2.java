@@ -14,37 +14,53 @@ import java.util.List;
 public class PacienteDAOH2 implements iDao<Paciente> {
     private static final Logger logger= Logger.getLogger(PacienteDAOH2.class);
     private static final String SQL_SELECT_ONE="SELECT * FROM PACIENTES WHERE ID=?";
-    private static final String SQL_INSERT="INSERT INTO PACIENTES(NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID) VALUES(?,?,?,?,?,?)";
+    private static final String SQL_INSERT = "INSERT INTO PACIENTES(NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID, EMAIL,ODONTOLOGO_ID) VALUES(?,?,?,?,?,?,?)";
+
     private static final String SQL_SELECT_ALL="SELECT * FROM PACIENTES";
     private static final String SQL_SELECT_BY_EMAIL="SELECT * FROM PACIENTES WHERE EMAIL=?";
-    private static final String SQL_UPDATE="UPDATE PACIENTES SET NOMBRE=?, APELLIDO=?, CEDULA=?, FECHA_INGRESO=?, DOMICILIO_ID=?, EMAIL=? WHERE ID=?";
+    private static final String SQL_UPDATE="UPDATE PACIENTES SET NOMBRE=?, APELLIDO=?, CEDULA=?, FECHA_INGRESO=?, DOMICILIO_ID=?, EMAIL=?, ODONTOLOGO_ID=?  WHERE ID=?";
     @Override
     public Paciente guardar(Paciente paciente) {
         logger.info("inciando las operaciones de guardado");
         Connection connection= null;
+
         DomicilioDAOH2 daoAux= new DomicilioDAOH2();
         Domicilio domicilio=  daoAux.guardar(paciente.getDomicilio());
-        try{
-            connection= BD.getConnection();
-            PreparedStatement psInsert= connection.prepareStatement(SQL_INSERT,Statement.RETURN_GENERATED_KEYS);
+        OdontologoDaoH2 daoAux1 = new OdontologoDaoH2();
+        Odontologo odontologo = null;
+        if (paciente.getOdontologo() != null) {
+            odontologo = daoAux1.guardar(paciente.getOdontologo());
+        }
+
+        try {
+            connection = BD.getConnection();
+            PreparedStatement psInsert = connection.prepareStatement(SQL_INSERT, Statement.RETURN_GENERATED_KEYS);
             psInsert.setString(1, paciente.getNombre());
             psInsert.setString(2, paciente.getApellido());
             psInsert.setString(3, paciente.getCedula());
             psInsert.setDate(4, Date.valueOf((paciente.getFechaIngreso())));
-            psInsert.setInt(5,domicilio.getId());
+            psInsert.setInt(5, domicilio.getId());
             psInsert.setString(6, paciente.getEmail());
-            psInsert.execute();
-            ResultSet clave= psInsert.getGeneratedKeys();
-            while (clave.next()){
-                paciente.setId(clave.getInt(1));
+            psInsert.setInt(7, paciente.getOdontologo().getId());
+            ResultSet rs = psInsert.getGeneratedKeys();
+            int affectedRows = psInsert.executeUpdate();
+            if (affectedRows == 0) {
+                throw new SQLException("No se pudo insertar el paciente en la base de datos");
+            }
+
+            rs = psInsert.getGeneratedKeys();
+            if (rs.next()) {
+                int generatedId = rs.getInt(1);
+                paciente.setId(generatedId);
+                logger.info("Paciente guardado con ID: " + generatedId);
+            } else {
+                throw new SQLException("No se pudo obtener el ID generado para el paciente");
             }
 
 
         } catch (Exception e) {
             logger.error(e.getMessage());
         }
-
-
         return paciente;
     }
 
@@ -63,20 +79,20 @@ public class PacienteDAOH2 implements iDao<Paciente> {
             ResultSet rs= psSElectOne.executeQuery();
             DomicilioDAOH2 daoAux= new DomicilioDAOH2();
             OdontologoDaoH2 daoAux1= new OdontologoDaoH2();
+
             while(rs.next()){
+
+
                 domicilio= daoAux.buscarPorId(rs.getInt(6));
                 odontologo= daoAux1.buscarPorId(rs.getInt(8));
                 paciente= new Paciente(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getDate(5).toLocalDate(),domicilio,rs.getString(7),odontologo);
-
+                rs.getInt(1);
             }
-
 
 
         }catch (Exception e){
             logger.error(e.getMessage());
         }
-
-
         return paciente;
     }
 
@@ -101,6 +117,9 @@ public class PacienteDAOH2 implements iDao<Paciente> {
             psUpdate.setInt(5,paciente.getDomicilio().getId());
             psUpdate.setString(6, paciente.getEmail());
             psUpdate.setInt(7,paciente.getId());
+            psUpdate.setInt(8, paciente.getId());
+            psUpdate.executeUpdate();
+            logger.info("Paciente actualizado con éxito");
             psUpdate.execute();
 
         }catch (Exception e){
@@ -134,7 +153,6 @@ public class PacienteDAOH2 implements iDao<Paciente> {
         return pacientes;
     }
 
-
     @Override
     public Paciente buscarPorString(String string) {
         logger.info("iniciando la busqueda por email: "+string);
@@ -142,6 +160,7 @@ public class PacienteDAOH2 implements iDao<Paciente> {
         Paciente paciente= null;
         Domicilio domicilio= null;
         DomicilioDAOH2 daoAux= new DomicilioDAOH2();
+
         try{
             connection=BD.getConnection();
             PreparedStatement psSelectE= connection.prepareStatement(SQL_SELECT_BY_EMAIL);
@@ -150,6 +169,7 @@ public class PacienteDAOH2 implements iDao<Paciente> {
             while(rs.next()){
                 domicilio= daoAux.buscarPorId(rs.getInt(6));
                 paciente= new Paciente(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getDate(5).toLocalDate(),domicilio,rs.getString(7));
+
 
             }
 

@@ -17,6 +17,11 @@ public class Paciente {
     private Domicilio domicilio;
     private String email;
     private Odontologo odontologo;
+
+
+    public Paciente() {
+    }
+
     public Paciente(String nombre, String apellido, String cedula, LocalDate fechaIngreso, Domicilio domicilio, String email, Odontologo odontologo) {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -28,6 +33,7 @@ public class Paciente {
 
         
     }
+
 
 
     public Paciente(Integer id, String nombre, String apellido, String cedula, LocalDate fechaIngreso, Domicilio domicilio, String email) {
