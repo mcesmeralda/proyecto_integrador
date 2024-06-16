@@ -48,17 +48,17 @@ window.addEventListener('load', function () {
                         '<td class=\"td_apellido\">' + odontologo.apellido.toUpperCase() + '</td>' +
                         '<td>' + deleteButton + '</td>';
 
-                }
+                };
 
             })
     })
 
-    (function(){
+    (function() {
         let pathname = window.location.pathname;
-        if (pathname == "/get_odontologos.html") {
-            document.querySelector(".nav .nav-item a:last").addClass("active");
+        if (pathname === "/get_odontologos.html") {
+            document.querySelector(".nav .nav-item:last-child a").classList.add("active");
         }
-    })
+    })();
 
 
 })

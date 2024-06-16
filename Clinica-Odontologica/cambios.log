@@ -511,23 +511,23 @@ INSERT INTO PACIENTES(NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID, EMA
 [2024-06-02 16:54:36] [ INFO ] [PacienteDAOH2:24] inciando las operaciones de guardado
 [2024-06-02 16:54:36] [ INFO ] [DomicilioDAOH2:21] iniciando las operaciones de guardado
 [2024-06-02 16:54:36] [ INFO ] [DomicilioDAOH2:35] domicilio guardado
-[2024-06-02 16:54:36] [ ERROR] [PacienteDAOH2:45] Cannot invoke "backendc3.Clinica_Odontologica.model.Odontologo.getId()" because the return value of "backendc3.Clinica_Odontologica.model.Paciente.getOdontologo()" is null
+[2024-06-02 16:54:36] [ ERROR] [PacienteDAOH2:45] Cannot invoke "backendc3.Clinica_Odontologica.entity.Odontologo.getId()" because the return value of "backendc3.Clinica_Odontologica.entity.Paciente.getOdontologo()" is null
 [2024-06-02 16:57:17] [ INFO ] [PacienteDAOH2:24] inciando las operaciones de guardado
 [2024-06-02 16:57:17] [ INFO ] [DomicilioDAOH2:21] iniciando las operaciones de guardado
 [2024-06-02 16:57:17] [ INFO ] [DomicilioDAOH2:35] domicilio guardado
-[2024-06-02 16:57:17] [ ERROR] [PacienteDAOH2:45] Cannot invoke "backendc3.Clinica_Odontologica.model.Odontologo.getId()" because the return value of "backendc3.Clinica_Odontologica.model.Paciente.getOdontologo()" is null
+[2024-06-02 16:57:17] [ ERROR] [PacienteDAOH2:45] Cannot invoke "backendc3.Clinica_Odontologica.entity.Odontologo.getId()" because the return value of "backendc3.Clinica_Odontologica.entity.Paciente.getOdontologo()" is null
 [2024-06-02 16:58:57] [ INFO ] [PacienteDAOH2:24] inciando las operaciones de guardado
 [2024-06-02 16:58:57] [ INFO ] [DomicilioDAOH2:21] iniciando las operaciones de guardado
 [2024-06-02 16:58:57] [ INFO ] [DomicilioDAOH2:35] domicilio guardado
-[2024-06-02 16:58:57] [ ERROR] [PacienteDAOH2:45] Cannot invoke "backendc3.Clinica_Odontologica.model.Odontologo.getId()" because the return value of "backendc3.Clinica_Odontologica.model.Paciente.getOdontologo()" is null
+[2024-06-02 16:58:57] [ ERROR] [PacienteDAOH2:45] Cannot invoke "backendc3.Clinica_Odontologica.entity.Odontologo.getId()" because the return value of "backendc3.Clinica_Odontologica.entity.Paciente.getOdontologo()" is null
 [2024-06-02 17:00:44] [ INFO ] [PacienteDAOH2:24] inciando las operaciones de guardado
 [2024-06-02 17:00:44] [ INFO ] [DomicilioDAOH2:21] iniciando las operaciones de guardado
 [2024-06-02 17:00:44] [ INFO ] [DomicilioDAOH2:35] domicilio guardado
-[2024-06-02 17:00:44] [ ERROR] [PacienteDAOH2:45] Cannot invoke "backendc3.Clinica_Odontologica.model.Odontologo.getId()" because the return value of "backendc3.Clinica_Odontologica.model.Paciente.getOdontologo()" is null
+[2024-06-02 17:00:44] [ ERROR] [PacienteDAOH2:45] Cannot invoke "backendc3.Clinica_Odontologica.entity.Odontologo.getId()" because the return value of "backendc3.Clinica_Odontologica.entity.Paciente.getOdontologo()" is null
 [2024-06-02 17:01:04] [ INFO ] [PacienteDAOH2:24] inciando las operaciones de guardado
 [2024-06-02 17:01:04] [ INFO ] [DomicilioDAOH2:21] iniciando las operaciones de guardado
 [2024-06-02 17:01:04] [ INFO ] [DomicilioDAOH2:35] domicilio guardado
-[2024-06-02 17:01:04] [ ERROR] [PacienteDAOH2:45] Cannot invoke "backendc3.Clinica_Odontologica.model.Odontologo.getId()" because the return value of "backendc3.Clinica_Odontologica.model.Paciente.getOdontologo()" is null
+[2024-06-02 17:01:04] [ ERROR] [PacienteDAOH2:45] Cannot invoke "backendc3.Clinica_Odontologica.entity.Odontologo.getId()" because the return value of "backendc3.Clinica_Odontologica.entity.Paciente.getOdontologo()" is null
 [2024-06-02 17:01:16] [ INFO ] [BD:35] tabla creada con exito
 [2024-06-02 17:01:22] [ INFO ] [PacienteDAOH2:24] inciando las operaciones de guardado
 [2024-06-02 17:01:22] [ INFO ] [DomicilioDAOH2:21] iniciando las operaciones de guardado
@@ -562,15 +562,15 @@ INSERT INTO PACIENTES(NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID, EMA
 [2024-06-02 17:06:19] [ INFO ] [PacienteDAOH2:24] inciando las operaciones de guardado
 [2024-06-02 17:06:19] [ INFO ] [DomicilioDAOH2:21] iniciando las operaciones de guardado
 [2024-06-02 17:06:19] [ INFO ] [DomicilioDAOH2:35] domicilio guardado
-[2024-06-02 17:06:19] [ ERROR] [PacienteDAOH2:49] Cannot invoke "backendc3.Clinica_Odontologica.model.Odontologo.getId()" because the return value of "backendc3.Clinica_Odontologica.model.Paciente.getOdontologo()" is null
+[2024-06-02 17:06:19] [ ERROR] [PacienteDAOH2:49] Cannot invoke "backendc3.Clinica_Odontologica.entity.Odontologo.getId()" because the return value of "backendc3.Clinica_Odontologica.entity.Paciente.getOdontologo()" is null
 [2024-06-02 17:06:49] [ INFO ] [PacienteDAOH2:24] inciando las operaciones de guardado
 [2024-06-02 17:06:49] [ INFO ] [DomicilioDAOH2:21] iniciando las operaciones de guardado
 [2024-06-02 17:06:49] [ INFO ] [DomicilioDAOH2:35] domicilio guardado
-[2024-06-02 17:06:49] [ ERROR] [PacienteDAOH2:49] Cannot invoke "backendc3.Clinica_Odontologica.model.Odontologo.getId()" because the return value of "backendc3.Clinica_Odontologica.model.Paciente.getOdontologo()" is null
+[2024-06-02 17:06:49] [ ERROR] [PacienteDAOH2:49] Cannot invoke "backendc3.Clinica_Odontologica.entity.Odontologo.getId()" because the return value of "backendc3.Clinica_Odontologica.entity.Paciente.getOdontologo()" is null
 [2024-06-02 17:06:56] [ INFO ] [PacienteDAOH2:24] inciando las operaciones de guardado
 [2024-06-02 17:06:56] [ INFO ] [DomicilioDAOH2:21] iniciando las operaciones de guardado
 [2024-06-02 17:06:56] [ INFO ] [DomicilioDAOH2:35] domicilio guardado
-[2024-06-02 17:06:56] [ ERROR] [PacienteDAOH2:49] Cannot invoke "backendc3.Clinica_Odontologica.model.Odontologo.getId()" because the return value of "backendc3.Clinica_Odontologica.model.Paciente.getOdontologo()" is null
+[2024-06-02 17:06:56] [ ERROR] [PacienteDAOH2:49] Cannot invoke "backendc3.Clinica_Odontologica.entity.Odontologo.getId()" because the return value of "backendc3.Clinica_Odontologica.entity.Paciente.getOdontologo()" is null
 [2024-06-02 17:07:03] [ INFO ] [BD:35] tabla creada con exito
 [2024-06-02 17:07:05] [ INFO ] [PacienteDAOH2:24] inciando las operaciones de guardado
 [2024-06-02 17:07:05] [ INFO ] [DomicilioDAOH2:21] iniciando las operaciones de guardado
@@ -645,7 +645,7 @@ SELECT * FROM ODONTOLOGOS [42104-224]
 [2024-06-03 10:55:49] [ INFO ] [PacienteDAOH2:24] inciando las operaciones de guardado
 [2024-06-03 10:55:49] [ INFO ] [DomicilioDAOH2:21] iniciando las operaciones de guardado
 [2024-06-03 10:55:49] [ INFO ] [DomicilioDAOH2:35] domicilio guardado
-[2024-06-03 10:55:49] [ ERROR] [PacienteDAOH2:40] Cannot invoke "backendc3.Clinica_Odontologica.model.Odontologo.getId()" because the return value of "backendc3.Clinica_Odontologica.model.Paciente.getOdontologo()" is null
+[2024-06-03 10:55:49] [ ERROR] [PacienteDAOH2:40] Cannot invoke "backendc3.Clinica_Odontologica.entity.Odontologo.getId()" because the return value of "backendc3.Clinica_Odontologica.entity.Paciente.getOdontologo()" is null
 [2024-06-03 10:59:24] [ INFO ] [BD:36] tabla creada con exito
 [2024-06-03 10:59:31] [ INFO ] [PacienteDAOH2:24] inciando las operaciones de guardado
 [2024-06-03 10:59:31] [ INFO ] [DomicilioDAOH2:21] iniciando las operaciones de guardado
@@ -663,21 +663,21 @@ SELECT * FROM ODONTOLOGOS [42104-224]
 [2024-06-03 11:04:22] [ INFO ] [PacienteDAOH2:24] inciando las operaciones de guardado
 [2024-06-03 11:04:22] [ INFO ] [DomicilioDAOH2:21] iniciando las operaciones de guardado
 [2024-06-03 11:04:22] [ INFO ] [DomicilioDAOH2:35] domicilio guardado
-[2024-06-03 11:04:22] [ ERROR] [PacienteDAOH2:40] Cannot invoke "backendc3.Clinica_Odontologica.model.Odontologo.getId()" because the return value of "backendc3.Clinica_Odontologica.model.Paciente.getOdontologo()" is null
+[2024-06-03 11:04:22] [ ERROR] [PacienteDAOH2:40] Cannot invoke "backendc3.Clinica_Odontologica.entity.Odontologo.getId()" because the return value of "backendc3.Clinica_Odontologica.entity.Paciente.getOdontologo()" is null
 [2024-06-03 11:22:49] [ INFO ] [BD:36] tabla creada con exito
 [2024-06-03 11:23:01] [ INFO ] [PacienteDAOH2:24] inciando las operaciones de guardado
 [2024-06-03 11:23:01] [ INFO ] [DomicilioDAOH2:21] iniciando las operaciones de guardado
 [2024-06-03 11:23:01] [ INFO ] [DomicilioDAOH2:35] domicilio guardado
-[2024-06-03 11:23:01] [ ERROR] [PacienteDAOH2:40] Cannot invoke "backendc3.Clinica_Odontologica.model.Odontologo.getId()" because the return value of "backendc3.Clinica_Odontologica.model.Paciente.getOdontologo()" is null
+[2024-06-03 11:23:01] [ ERROR] [PacienteDAOH2:40] Cannot invoke "backendc3.Clinica_Odontologica.entity.Odontologo.getId()" because the return value of "backendc3.Clinica_Odontologica.entity.Paciente.getOdontologo()" is null
 [2024-06-03 11:27:23] [ INFO ] [BD:36] tabla creada con exito
 [2024-06-03 11:27:29] [ INFO ] [PacienteDAOH2:24] inciando las operaciones de guardado
 [2024-06-03 11:27:29] [ INFO ] [DomicilioDAOH2:21] iniciando las operaciones de guardado
 [2024-06-03 11:27:29] [ INFO ] [DomicilioDAOH2:35] domicilio guardado
-[2024-06-03 11:27:29] [ ERROR] [PacienteDAOH2:40] Cannot invoke "backendc3.Clinica_Odontologica.model.Odontologo.getId()" because the return value of "backendc3.Clinica_Odontologica.model.Paciente.getOdontologo()" is null
+[2024-06-03 11:27:29] [ ERROR] [PacienteDAOH2:40] Cannot invoke "backendc3.Clinica_Odontologica.entity.Odontologo.getId()" because the return value of "backendc3.Clinica_Odontologica.entity.Paciente.getOdontologo()" is null
 [2024-06-03 11:27:39] [ INFO ] [PacienteDAOH2:24] inciando las operaciones de guardado
 [2024-06-03 11:27:39] [ INFO ] [DomicilioDAOH2:21] iniciando las operaciones de guardado
 [2024-06-03 11:27:39] [ INFO ] [DomicilioDAOH2:35] domicilio guardado
-[2024-06-03 11:27:39] [ ERROR] [PacienteDAOH2:40] Cannot invoke "backendc3.Clinica_Odontologica.model.Odontologo.getId()" because the return value of "backendc3.Clinica_Odontologica.model.Paciente.getOdontologo()" is null
+[2024-06-03 11:27:39] [ ERROR] [PacienteDAOH2:40] Cannot invoke "backendc3.Clinica_Odontologica.entity.Odontologo.getId()" because the return value of "backendc3.Clinica_Odontologica.entity.Paciente.getOdontologo()" is null
 [2024-06-03 11:38:34] [ INFO ] [PacienteDAOH2:24] inciando las operaciones de guardado
 [2024-06-03 11:38:34] [ INFO ] [DomicilioDAOH2:21] iniciando las operaciones de guardado
 [2024-06-03 11:38:34] [ INFO ] [DomicilioDAOH2:35] domicilio guardado

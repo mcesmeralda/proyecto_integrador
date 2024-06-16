@@ -1,6 +1,5 @@
 package backendc3.Clinica_Odontologica;
-
-import backendc3.Clinica_Odontologica.dao.BD;
+import backendc3.Clinica_Odontologica.ClinicaOdontologicaApplication;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -8,8 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ClinicaOdontologicaApplication {
 
 	public static void main(String[] args) {
-		BD.crearTablas();
-		SpringApplication.run(ClinicaOdontologicaApplication.class, args);
+
+			SpringApplication.run(ClinicaOdontologicaApplication.class, args);
+		}
 	}
 
-}

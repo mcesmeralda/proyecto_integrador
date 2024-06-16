@@ -1,57 +1,69 @@
 package backendc3.Clinica_Odontologica.controller;
 
-import backendc3.Clinica_Odontologica.model.Odontologo;
-import backendc3.Clinica_Odontologica.model.Paciente;
+import backendc3.Clinica_Odontologica.entity.Odontologo;
+import backendc3.Clinica_Odontologica.entity.Paciente;
+import backendc3.Clinica_Odontologica.exception.ResourceNotFoundException;
 import backendc3.Clinica_Odontologica.service.OdontologoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
+
 @RestController
 @RequestMapping("/odontologos")
 public class OdontologoController {
-    private final OdontologoService odontologoService;
+    @Autowired
+    private  OdontologoService odontologoService;
 
-    public OdontologoController() {
-        odontologoService= new OdontologoService();
+
+    @PostMapping //--> nos permite persistir los datos que vienen desde la vista
+    public ResponseEntity<Odontologo> guardarOdontologo(@RequestBody Odontologo odontologo) {
+        return  ResponseEntity.ok(odontologoService.guardarOdontologo(odontologo));
     }
-    @GetMapping("/todos")
-
-    public  String buscarOdontologoTodos(Model model){
-        List<Odontologo> listaOdontologos = odontologoService.buscarOdontologos();
-        model.addAttribute("odontologos", listaOdontologos);
-        return "listaodontologos";
 
 
-}
+    @GetMapping
+    public  ResponseEntity <List<Odontologo>> buscarTodos(){
+        return  ResponseEntity.ok(odontologoService.listarTodos());
+
+    }
 
     @PutMapping("/update")
-    public String actualizarOdontologos(@RequestBody Odontologo odontologo) {
+    public ResponseEntity<String> actualizarOdontologo(@RequestBody Odontologo odontologo) {
 
-        Odontologo odontologoBuscado = odontologoService.buscarPorID(odontologo.getId());
-        if (odontologoBuscado != null) {
+        Optional<Odontologo> odontologoBuscado = odontologoService.buscarPorId(odontologo.getId());
+        if (odontologoBuscado.isPresent()) {
             odontologoService.actualizarOdontologo(odontologo);
-            return "odontologo actualizado con exito";
+            return ResponseEntity.ok("odontologo actualizado con exito");
         } else {
-            return "odontologo no encontrado";
+            return ResponseEntity.badRequest().build();
         }
 
     }
 
-    @PostMapping
-    public Odontologo guardarOdontologo(@RequestBody Odontologo odontologo){
-        return odontologoService.guardarOdontologo(odontologo);
-    }
-    @GetMapping
-    public ResponseEntity<List<Odontologo>> listarTodos(){
-        return ResponseEntity.ok(odontologoService.listarTodos());
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> eliminarOdontologo(@PathVariable Long id) throws ResourceNotFoundException{
+
+        Optional<Odontologo> odontologoBuscado = odontologoService.buscarPorId(id);
+        if (odontologoBuscado.isPresent()) {
+            odontologoService.eliminarOdontologo(id);
+            return ResponseEntity.ok("odontologo eliminado con exito");
+        } else {
+
+            throw new ResourceNotFoundException("odontologo o encontrado");
+//            return ResponseEntity.notFound().build();
+        }
+
     }
 
-    @GetMapping("/{id}")
-    public Odontologo buscarOdontologo(@PathVariable Integer id) {
-        return odontologoService.buscarPorID(id);
+
+    @GetMapping("/buscar/{id}")
+    public ResponseEntity<Optional<Odontologo>> buscarPorId(@PathVariable Long id) {
+        return ResponseEntity.ok(odontologoService.buscarPorId(id));
     }
+
 
 }
 

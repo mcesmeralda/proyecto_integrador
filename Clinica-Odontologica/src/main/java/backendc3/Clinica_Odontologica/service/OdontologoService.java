@@ -1,44 +1,35 @@
 package backendc3.Clinica_Odontologica.service;
 
-import backendc3.Clinica_Odontologica.dao.OdontologoDaoH2;
-import backendc3.Clinica_Odontologica.dao.iDao;
-import backendc3.Clinica_Odontologica.model.Odontologo;
-import backendc3.Clinica_Odontologica.model.Paciente;
+import backendc3.Clinica_Odontologica.entity.Odontologo;
+import backendc3.Clinica_Odontologica.repository.OdontologoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
-public class OdontologoService{
-    private iDao<Odontologo> OdontologoiDao;
+    @Service
+    public class OdontologoService{
+        @Autowired
+        private OdontologoRepository odontologoRepository;
 
-    public OdontologoService() {
-        OdontologoiDao= new OdontologoDaoH2();
-    }
-    //metodos manuales
-    public Odontologo guardarOdontologo(Odontologo odontologo){
-        return OdontologoiDao.guardar(odontologo);
-    }
-    public List<Odontologo> buscarTodos() {
-        return OdontologoiDao.buscarTodos();
+        public Odontologo guardarOdontologo(Odontologo odontologo) {
+            return odontologoRepository.save(odontologo);
+        }
+        public Optional<Odontologo> buscarPorId(Long id){
+            return odontologoRepository.findById(id);
+        }
 
-    }
-
-    public Odontologo buscarPorID(Integer id){
-        return OdontologoiDao.buscarPorId(id);
-    }
-
-    public Odontologo buscarPorString(String string) {
-    return buscarPorString(string);}
-
-    public List<Odontologo> buscarOdontologos() {
-        return buscarOdontologos();
-    }
-
-    public void actualizarOdontologo(Odontologo odontologo){
-        OdontologoiDao.actualizar(odontologo);
-    }
-
-    public List<Odontologo>listarTodos(){
-        return OdontologoiDao.buscarTodos();
-    }
-
+        public void actualizarOdontologo(Odontologo odontologo){
+            odontologoRepository.save(odontologo);
+        }
+        public void eliminarOdontologo(Long id){
+            odontologoRepository.deleteById(id);
+        }
+        public List<Odontologo> listarTodos(){
+            return odontologoRepository.findAll();
+        }
+        public Optional<Odontologo>buscarPorNombre(String nombre){
+            return odontologoRepository.buscarPorNombre(nombre);
+        }
 }
