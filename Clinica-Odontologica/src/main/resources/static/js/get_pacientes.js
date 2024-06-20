@@ -13,8 +13,7 @@ window.addEventListener('load', function () {
             .then(data => {
                 //recorremos la colección de peliculas del JSON
                 for(paciente of data){
-                    //por cada pelicula armaremos una fila de la tabla
-                    //cada fila tendrá un id que luego nos permitirá borrar la fila si eliminamos la pelicula
+
                     var table = document.getElementById("pacienteTable");
                     var pacienteRow =table.insertRow();
                     let tr_id = 'tr_' + paciente.id;
@@ -65,4 +64,4 @@ window.addEventListener('load', function () {
     })();
 
 
-})
+});
