@@ -64,4 +64,16 @@ public class TurnoController {
            return ResponseEntity.notFound().build();
         }
     }
+
+
+    @PutMapping("/{update}")
+    public ResponseEntity<String> actualizarTurno(@PathVariable Turno turno) {
+        Optional<Turno> turnoBuscado = turnoService.buscarPorId(turno.getId());
+        if (turnoBuscado.isPresent()) {
+            turnoService.actualizarTurno(turno);
+            return ResponseEntity.ok("turno actualizado con exito");
+        } else {
+            return ResponseEntity.badRequest().build();
+        }
+    }
 }

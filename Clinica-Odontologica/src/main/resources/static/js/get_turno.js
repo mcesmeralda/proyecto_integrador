@@ -1,9 +1,9 @@
 window.addEventListener('load', function () {
-    const url = '/turnos/buscarTodos'; // URL de la API para obtener los turnos
+    const url = '/turnos'; // URL base de la API para los turnos
 
     // Función para cargar y mostrar los turnos desde la API
     function cargarTurnos() {
-        fetch(url)
+        fetch(url + '/buscarTodos')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Error en la solicitud.');
