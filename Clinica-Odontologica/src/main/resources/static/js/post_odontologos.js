@@ -1,21 +1,18 @@
 window.addEventListener('load', function () {
 
-    // Al cargar la página buscamos y obtenemos el formulario donde estarán
-    // los datos que el usuario cargará del nuevo odontólogo
     const formulario = document.querySelector('#add_new_odontologo');
 
-    // Ante un submit del formulario se ejecutará la siguiente función
     formulario.addEventListener('submit', function (event) {
-        event.preventDefault(); // Evita que se recargue la página por defecto
+        event.preventDefault();
 
-        // Creamos un objeto con los datos del nuevo odontólogo
+
         const formData = {
             numeroMatricula: document.querySelector('#numeroMatricula').value,
             nombre: document.querySelector('#nombre').value,
             apellido: document.querySelector('#apellido').value
         };
 
-        // Invocamos la API odontologos con el método POST para guardar el nuevo odontólogo en formato JSON
+
         const url = '/odontologos';
         const settings = {
             method: 'POST',
@@ -33,7 +30,7 @@ window.addEventListener('load', function () {
                 return response.json();
             })
             .then(data => {
-                // Si la respuesta es exitosa, mostramos un mensaje de éxito
+
                 let successAlert = '<div class="alert alert-success alert-dismissible">' +
                     '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
                     '<strong>Odontólogo agregado</strong>' +
@@ -47,7 +44,7 @@ window.addEventListener('load', function () {
                 // Si hay algún error, mostramos un mensaje de error
                 let errorAlert = '<div class="alert alert-danger alert-dismissible">' +
                     '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
-                    '<strong>Error: ' + error.message + '</strong>' +
+                    '<strong> Error intente nuevamente</strong>' +
                     '</div>';
 
                 document.querySelector('#response').innerHTML = errorAlert;

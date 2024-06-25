@@ -28,6 +28,9 @@ window.addEventListener('load', function () {
                         '&times' +
                         '</button>';
 
+
+
+
                     //por cada pelicula creamos un boton que muestra el id y que al hacerle clic invocará
                     //a la función de java script findBy que se encargará de buscar la pelicula que queremos
                     //modificar y mostrar los datos de la misma en un formulario.
@@ -62,6 +65,8 @@ window.addEventListener('load', function () {
             document.querySelector(".nav .nav-item:last-child a").classList.add("active");
         }
     })();
+
+
 
 
 });

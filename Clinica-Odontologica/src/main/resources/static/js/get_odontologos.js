@@ -27,14 +27,23 @@ window.addEventListener('load', function () {
                     let deleteButton = '<button id="btn_delete_' + odontologo.id + '" type="button" onclick="deleteBy(' + odontologo.id + ')" class="btn btn-danger btn_delete">&times;</button>';
                     let updateButton = '<button id="btn_id_' + odontologo.id + '" type="button" onclick="findBy(' + odontologo.id + ')" class="btn btn-info btn_id">' + odontologo.id + '</button>';
 
+
+
+
                     // Construcción de la fila de la tabla con los datos del odontólogo
                     odontologoRow.innerHTML = '<td>' + updateButton + '</td>' +
                         '<td class="td_numeroMatricula">' + (odontologo.numeroMatricula ? odontologo.numeroMatricula.toUpperCase() : '') + '</td>' +
                         '<td class="td_nombre">' + (odontologo.nombre ? odontologo.nombre.toUpperCase() : '') + '</td>' +
                         '<td class="td_apellido">' + (odontologo.apellido ? odontologo.apellido.toUpperCase() : '') + '</td>' +
                         '<td>' + deleteButton + '</td>';
+
+                    clearForm()
+
                 });
             })
+
+
+
             .catch(error => {
                 console.error('Error al obtener odontólogos:', error);
             });

@@ -45,7 +45,7 @@ public class OdontologoServiceTest {
         Odontologo odontologo= new Odontologo(id,"11e", "esme", "montoya");
         odontologoService.actualizarOdontologo(odontologo);
         Optional<Odontologo> odontologoBuscado= odontologoService.buscarPorId(id);
-        assertEquals("German", odontologoBuscado.get().getNombre());
+        assertEquals("esme", odontologoBuscado.get().getNombre());
     }
 
     @Test

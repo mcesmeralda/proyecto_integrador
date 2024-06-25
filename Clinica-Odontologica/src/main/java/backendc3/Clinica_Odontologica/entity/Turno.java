@@ -35,6 +35,13 @@ public class Turno {
     public Turno() {
     }
 
+    public Turno(String number, String number1, LocalDate of) {
+        ;
+    }
+
+    public Turno(Long id, String number, String number1, LocalDate of) {
+    }
+
     @Override
     public String toString() {
         return "Turno{" +
