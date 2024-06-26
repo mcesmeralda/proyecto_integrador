@@ -26,8 +26,8 @@ function loadOdontologos() {
                         <td>${odontologo.nombre}</td>
                         <td>${odontologo.apellido}</td>
                         <td>
-                            <button class="btn btn-danger" onclick="deleteBy(${odontologo.id})">Eliminar</button>
-                            <button class="btn btn-info" onclick="findBy(${odontologo.id})">Editar</button>
+                            <button class="btn btn-danger" onclick="deleteBy(${odontologo.id})">X</button>
+                            <button class="btn btn-info" onclick="findBy(${odontologo.id})">✏️</button>
                         </td>
                     `;
                 tbody.appendChild(tr);
