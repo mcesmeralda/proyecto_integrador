@@ -24,7 +24,7 @@ window.addEventListener('load', function () {
                     odontologoRow.id = odontologo.id;
 
                     // Construcción de los botones para eliminar y actualizar
-                    let deleteButton = '<button id="btn_delete_' + odontologo.id + '" type="button" onclick="deleteBy(' + odontologo.id + ')" class="btn btn-danger btn_delete">&times;</button>';
+
                     let updateButton = '<button id="btn_id_' + odontologo.id + '" type="button" onclick="findBy(' + odontologo.id + ')" class="btn btn-info btn_id">' + odontologo.id + '</button>';
 
 

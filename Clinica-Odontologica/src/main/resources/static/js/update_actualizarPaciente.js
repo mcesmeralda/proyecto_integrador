@@ -26,7 +26,7 @@ function loadPacientes() {
                         <td>${paciente.email}</td>
                         <td>
                             <button type="button" class="btn btn-danger" onclick="deleteBy(${paciente.id})">&times;</button>
-                            <button type="button" class="btn btn-info" onclick="findBy(${paciente.id})">${paciente.id}</button>
+                            <button type="button" class="btn btn-info btn_id" onclick="findBy(${paciente.id})">${paciente.id}</button>
                         </td>
                     `;
                 tableBody.appendChild(pacienteRow);

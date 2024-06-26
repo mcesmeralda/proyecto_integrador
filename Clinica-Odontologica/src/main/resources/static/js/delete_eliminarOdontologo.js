@@ -1,4 +1,53 @@
-// Función para eliminar un odontólogo por su ID
+document.addEventListener('DOMContentLoaded', (event) => {
+    loadOdontologos(); // Cargar los odontólogos al cargar la página
+});
+
+function clearForm() {
+    document.querySelector('#odontologo_id').value = '';
+    document.querySelector('#numeroMatricula').value = '';
+    document.querySelector('#nombre').value = '';
+    document.querySelector('#apellido').value = '';
+    document.getElementById('div_odontologo_updating').style.display = "none";
+}
+
+function loadOdontologos() {
+    fetch('/odontologos')
+        .then(response => response.json())
+        .then(data => {
+            const normalizedData = normalizeData(data);
+            const tbody = document.getElementById('odontologoTableBody');
+            tbody.innerHTML = ''; // Limpiar la tabla antes de cargar nuevos datos
+            normalizedData.forEach(odontologo => {
+                const tr = document.createElement('tr');
+                tr.id = `tr_${odontologo.id}`;
+                tr.innerHTML = `
+                        <td>${odontologo.id}</td>
+                        <td>${odontologo.numeroMatricula}</td>
+                        <td>${odontologo.nombre}</td>
+                        <td>${odontologo.apellido}</td>
+                        <td>
+                            <button class="btn btn-danger" onclick="deleteBy(${odontologo.id})">Eliminar</button>
+                            <button class="btn btn-info" onclick="findBy(${odontologo.id})">Editar</button>
+                        </td>
+                    `;
+                tbody.appendChild(tr);
+            });
+        })
+        .catch(error => console.error('Error al cargar los odontólogos:', error));
+}
+
+function normalizeData(data) {
+    const seen = new Set();
+    return data.filter(odontologo => {
+        const key = `${odontologo.nombre} ${odontologo.apellido}`;
+        if (seen.has(key)) {
+            return false;
+        }
+        seen.add(key);
+        return true;
+    });
+}
+
 function deleteBy(id) {
     const url = `/odontologos/${id}`;
     const settings = {
@@ -8,7 +57,6 @@ function deleteBy(id) {
     fetch(url, settings)
         .then(response => {
             if (response.ok) {
-                // Eliminar la fila de la tabla
                 const row = document.getElementById(`tr_${id}`);
                 if (row) {
                     row.remove();
@@ -24,7 +72,7 @@ function deleteBy(id) {
         })
         .catch(error => console.error('Error al eliminar el odontólogo:', error));
 }
-// Función para encontrar un odontólogo por su ID y cargar sus datos en el formulario de actualización
+
 function findBy(id) {
     const url = `/odontologos/${id}`;
     const settings = {
@@ -38,7 +86,6 @@ function findBy(id) {
             document.querySelector('#numeroMatricula').value = data.numeroMatricula;
             document.querySelector('#nombre').value = data.nombre;
             document.querySelector('#apellido').value = data.apellido;
-
 
             document.getElementById('div_odontologo_updating').style.display = "block";
         })
